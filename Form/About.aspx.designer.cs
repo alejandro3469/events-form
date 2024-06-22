@@ -15,58 +15,67 @@ namespace Form
     {
 
         /// <summary>
-        /// Listbox1 control.
+        /// txtTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Listbox1;
+        protected global::System.Web.UI.WebControls.TextBox txtTitle;
 
         /// <summary>
-        /// flexCheckDefault control.
+        /// ddlType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox flexCheckDefault;
+        protected global::System.Web.UI.WebControls.DropDownList ddlType;
 
         /// <summary>
-        /// flexSwitchCheckDefault control.
+        /// chkFood control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox flexSwitchCheckDefault;
+        protected global::System.Web.UI.WebControls.CheckBox chkFood;
 
         /// <summary>
-        /// btnradio1 control.
+        /// chkDark control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton btnradio1;
+        protected global::System.Web.UI.WebControls.CheckBox chkDark;
 
         /// <summary>
-        /// btnradio2 control.
+        /// rdbHouse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton btnradio2;
+        protected global::System.Web.UI.WebControls.RadioButton rdbHouse;
 
         /// <summary>
-        /// btnradio3 control.
+        /// rdbApartment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton btnradio3;
+        protected global::System.Web.UI.WebControls.RadioButton rdbApartment;
+
+        /// <summary>
+        /// rdbSaloon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdbSaloon;
 
         /// <summary>
         /// exampleColorInput control.
