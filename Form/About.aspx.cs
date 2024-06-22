@@ -13,5 +13,10 @@ namespace Form
         {
 
         }
+
+        protected void MyButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

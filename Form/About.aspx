@@ -1,62 +1,71 @@
 ﻿<%@ Page Title="Form" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Form.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <h3>Cretae a web page as an invitation for your event</h3>
+    <h3 class="m-100-px">Create a web page as an invitation for your event</h3>
     <hr />
-    <div class="mb-3">
-        <label>Event title</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="row g-3 align-items-center">
-        <div class="col-auto">
-            <label for="inputPassword6" class="col-form-label">Password</label>
+    <div class="d-flex flex-column align-items-left justify-content-between grid gap-3">
+
+        <div class="row row-gap-3">
+            <div class="col-6">
+                <label>Event title</label>
+                <asp:TextBox type="text" class="form-control" runat="server" />
+            </div>
+            <div class="col-6">
+                <label>Event type</label>
+                <asp:DropDownList ID="Listbox1" class="form-select" aria-label="Default select example" runat="server">
+                    <asp:ListItem Value="null" Selected="True">Choose a type of event</asp:ListItem>
+                    <asp:ListItem Value="null">Wedding</asp:ListItem>
+                    <asp:ListItem Value="null">Party</asp:ListItem>
+                    <asp:ListItem Value="null">Dinner</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+
+            <div class="row col-6">
+                <div class="form-check">
+                    <asp:CheckBox class="form-check-input" ID="flexCheckDefault" runat="server" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Will be food
+                    </label>
+                </div>
+                <div class="form-check form-check-switch">
+                    <asp:CheckBox class="form-check-input" ID="flexSwitchCheckDefault" runat="server" />
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Darkmode</label>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label>Hosting type</label>
+                <div class="form-check">
+                    <asp:RadioButton GroupName="hosting_place" type="radio" class="form-check-input" name="btnradio" ID="btnradio1" autocomplete="off" Checked="true" runat="server" />
+                    <label class="form-check-label" for="btnradio1">House</label>
+                </div>
+
+                <div class="form-check">
+                    <asp:RadioButton GroupName="hosting_place" type="radio" class="form-check-input" name="btnradio" ID="btnradio2" autocomplete="off" runat="server" />
+                    <label class="form-check-label" for="btnradio2">Apartment</label>
+
+                </div>
+
+                <div class="form-check">
+                    <asp:RadioButton GroupName="hosting_place" type="radio" class="form-check-input" name="btnradio" ID="btnradio3" autocomplete="off" runat="server" />
+                    <label class="form-check-label" for="btnradio3">Saloon</label>
+
+                </div>
+            </div>
+            <div class="col-6">
+                <label>Number of guests</label>
+                <asp:TextBox type="text" class="form-control" runat="server" />
+            </div>
+
+
+            <div class="col-6 gap-6">
+
+                <label class="text-nowrap">Primary color (hex)</label>
+                <asp:TextBox type="color" class="form-control  form-control-color" ID="exampleColorInput" value="#563d7c" title="Choose your color" runat="server" />
+            </div>
         </div>
-        <div class="col-auto">
-            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-        </div>
-        <div class="col-auto">
-            <span id="passwordHelpInline" class="form-text">Must be 8-20 characters long.
-            </span>
-        </div>
-    </div>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Chhose a type of event</option>
-        <option value="1">Wedding</option>
-        <option value="2">Party</option>
-        <option value="3">Dinner</option>
-    </select>
 
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-            Will be food
-        </label>
-    </div>
-
-    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="btnradio1">House</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio2">Apoartment</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio3">Saloon</label>
-    </div>
-
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Lightmode/Darkmode</label>
-    </div>
-
-    <div>
-        <label for="customRange1" class="form-label">Number of people</label>
-        <input type="range" class="form-range" id="customRange1">
-    </div>
-    <div>
-        <label for="exampleColorInput" class="form-label">Invitation main color</label>
-        <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+    <asp:Button Text="Send" class="btn btn-primary col-3" ID="MyButton" runat="server" />
     </div>
 
 </asp:Content>

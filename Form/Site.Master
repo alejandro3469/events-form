@@ -54,7 +54,7 @@
         </asp:ScriptManager>
 
 
-        <div class="container body-content">
+        <div class="container body-content vh-100 d-flex flex-column justify-content-between gap-6">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
